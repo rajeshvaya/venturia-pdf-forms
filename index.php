@@ -36,7 +36,7 @@ function fill_form(){
 
 	//fill the field value as an array 
 	$pdf->fillForm(array(
-		'topmostSubform[0].Page3[0].Q1_Last_Name[0]'=>'Vaya',
+		'topmostSubform[0].Page3[0].Q1_Last_Name[0]'=>'Vaya', // the field name is taken from the "get_fields()" function which will output all the fields in the form
 		'topmostSubform[0].Page3[0].Q2_Your_first_name[0]' => 'Rajesh',
 
 	));
@@ -44,7 +44,7 @@ function fill_form(){
     $pdf->flatten()->saveAs("filled/filled_{$t}.pdf");
 }
 
-
+//get_fields(); // to get the list of the fields in the PDF file, uncomment this file.
 fill_form();
 
 
